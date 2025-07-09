@@ -24,6 +24,20 @@
           class="formbold-form-input"
         />
       </div>
+      <!-- Place this script at the end of your HTML, just before </body> -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector('.formbold-form-wrapper form');
+  const formWrapper = document.querySelector('.formbold-form-wrapper');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Stop the form from submitting normally
+
+    // Clear the form content and show thank you message
+    formWrapper.innerHTML = "<h2 style='text-align:center;color:#6a64f1;margin-top:30px;'>Thank you for contacting us!</h2>";
+  });
+});
+</script>
 
       <div class="formbold-mb-5">
         <label for="subject" class="formbold-form-label"> Subject </label>
