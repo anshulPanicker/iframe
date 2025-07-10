@@ -178,3 +178,14 @@ document.addEventListener("DOMContentLoaded", function() {
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VW9XDPK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<script>
+window.addEventListener('load',function(){
+  var TY = setInterval(function(){
+  if(window.location.pathname==='/iframe/' && document.querySelector('h2').innerText.includes("Thank you for contacting us!")){
+  dataLayer.push({'event':'contactFormSubmitted'});
+      clearInterval(TY);
+}
+},500);
+});
+</script>
